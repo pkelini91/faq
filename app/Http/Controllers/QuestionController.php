@@ -65,7 +65,14 @@ class QuestionController extends Controller
      */
     public function show(Question $question)
     {
-        return view('question')->with('question', $question);
+        $auth = Auth::user()->id;
+        $user = $question->user()->get()->first()->id;
+        $canEdit = $auth == $user;
+        $data = [
+            'question' => $question,
+            'canEdit' => $canEdit
+        ];
+        return view('question')->with($data);
     }
     /**
      * Show the form for editing the specified resource.
