@@ -11,6 +11,7 @@
 
                         {{$question->body}}
                     </div>
+                    @if($canEdit)
                     <div class="card-footer">
                         <a class="btn btn-primary float-right"
                            href="{{ route('questions.edit',['id'=> $question->id])}}">
@@ -22,6 +23,7 @@
                         </button>
                         {!! Form::close() !!}
                     </div>
+                    @endif
                 </div>
             </div>
 

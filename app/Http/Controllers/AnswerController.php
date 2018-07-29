@@ -61,8 +61,16 @@ class AnswerController extends Controller
      */
     public function show($question,  $answer)
     {
+        $auth = Auth::user()->id;
+        $user = Answer::where('id', $answer)->first()->user()->get()->first()->id;
+        $canEdit = $auth == $user;
         $answer = Answer::find($answer);
-        return view('answer')->with(['answer' => $answer, 'question' => $question]);
+        $data = [
+            'question' => $question,
+            'canEdit' => $canEdit,
+            'answer' => $answer
+        ];
+        return view('answer')->with($data);
     }
     /**
      * Show the form for editing the specified resource.
