@@ -15,10 +15,15 @@ To run the FAQ project:
 Website features:
 
 -users can create new accounts
+
 - users can ask questions 
+
 -users can answer questions
+
 -users can create new questions
+
 users can edit their own profile 
+
 
 
 The final feature for the FAQ project:
