@@ -10,3 +10,14 @@ To run the FAQ project:
 
 4.setup database / with sqlite or other  https://laravel.com/docs/5.6/eloquent
 
+The final feature for the FAQ project:
+
+1) All users can view questions on homepage
+
+2) All users can answer questions on homepage
+
+3) No one can edit or delete the question you asked but you
+
+4) user can update and edit profile
+
+
